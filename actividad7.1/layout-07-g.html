@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />    
+    <title>Layout XX - CSS Grid</title>
+    <style>
+        header, nav, article, aside, footer {background-color: green;}
+        body { 
+            margin: 1em; 
+            padding: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas:
+                "nav header"
+                "nav article"
+                "nav article"
+                "nav aside"
+                "nav footer"
+            ;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 1em;
+        }
+        header {grid-area: header;}
+        article {grid-area: article;}
+        nav {grid-area: nav;}
+        aside {grid-area: aside;}
+        footer {grid-area: footer;}       
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+</html>
